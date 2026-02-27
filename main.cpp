@@ -16,7 +16,7 @@ using namespace std;
 struct Appliance {
     string name;
     double powerW;      // watts
-    double hoursPerDay; // 0 - 24
+    double hoursPerDay; // 0 - 24//
 
     double energyKWhPerDay() const {
         return (powerW * hoursPerDay) / 1000.0;
@@ -119,7 +119,7 @@ Appliance registerAppliance() {
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     do {
-        cout << "Enter appliance name: ";
+        cout << "Enter appliance name: "; 
         getline(cin, a.name);
         if (a.name.empty()) cout << "Name must not be empty.\n";
     } while (a.name.empty());
